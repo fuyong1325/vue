@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Robots" content="all" />
+    <meta name="Copyright" content="国家老年疾病临床医学研究中心" />
+    <meta name="Keywords" content="老年医学,中老年疾病,老年科室建设,老年医学联盟,老年医学政策导读,老年医学数字化,老年医学科研平台,老年医学技术应用,老年医学协同研究单位申报,老年疾病临床研究,临床医学研究中心" />
+    <meta name="Description" content="国家中心协同研究网络数字化平台。提供老年医学协同研究单位申报，老年医学学术文章投稿，老年医学动态、政策导读、科研讲座、科室建设、技术应用等功能。" />
+    <link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico" type="image/x-icon">
+    <title>中国老年医学数字化联盟</title>
+    <!-- require cdn assets css -->
+    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" />
+    <% } %>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but National Center H5 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- require cdn assets js -->
+    <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
